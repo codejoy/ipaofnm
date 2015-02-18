@@ -1,0 +1,75 @@
+<h1>Listing providers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Providertin</th>
+      <th>Providerlastname</th>
+      <th>Providerfirstname</th>
+      <th>Dob</th>
+      <th>Deanum</th>
+      <th>Deaexpires</th>
+      <th>Nmlicensenum</th>
+      <th>Nmlicenseexpires</th>
+      <th>Providerphone</th>
+      <th>Providersecondaryphone</th>
+      <th>Providerfax</th>
+      <th>Providercell</th>
+      <th>Providernpi</th>
+      <th>Officecontact</th>
+      <th>Crdntcontact</th>
+      <th>Hospitalaffiliation</th>
+      <th>Hospitalaffiliation</th>
+      <th>Providernotes</th>
+      <th>Dues</th>
+      <th>Adjustment</th>
+      <th>Startdate</th>
+      <th>Changedate</th>
+      <th>Change</th>
+      <th>Provisionaldate</th>
+      <th>Caqhnum</th>
+      <th>Provision</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @providers.each do |provider| %>
+      <tr>
+        <td><%= provider.providertin %></td>
+        <td><%= provider.providerlastname %></td>
+        <td><%= provider.providerfirstname %></td>
+        <td><%= provider.dob %></td>
+        <td><%= provider.deanum %></td>
+        <td><%= provider.deaexpires %></td>
+        <td><%= provider.nmlicensenum %></td>
+        <td><%= provider.nmlicenseexpires %></td>
+        <td><%= provider.providerphone %></td>
+        <td><%= provider.providersecondaryphone %></td>
+        <td><%= provider.providerfax %></td>
+        <td><%= provider.providercell %></td>
+        <td><%= provider.providernpi %></td>
+        <td><%= provider.officecontact %></td>
+        <td><%= provider.crdntcontact %></td>
+        <td><%= provider.hospitalaffiliation %></td>
+        <td><%= provider.hospitalaffiliation %></td>
+        <td><%= provider.providernotes %></td>
+        <td><%= provider.dues %></td>
+        <td><%= provider.adjustment %></td>
+        <td><%= provider.startdate %></td>
+        <td><%= provider.changedate %></td>
+        <td><%= provider.change %></td>
+        <td><%= provider.provisionaldate %></td>
+        <td><%= provider.caqhnum %></td>
+        <td><%= provider.provision %></td>
+        <td><%= link_to 'Show', provider %></td>
+        <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
+        <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Provider', new_provider_path %>

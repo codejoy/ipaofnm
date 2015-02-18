@@ -1,0 +1,121 @@
+<%= form_for(@provider) do |f| %>
+  <% if @provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
+
+      <ul>
+      <% @provider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :providertin %><br>
+    <%= f.text_area :providertin %>
+  </div>
+  <div class="field">
+    <%= f.label :providerlastname %><br>
+    <%= f.text_area :providerlastname %>
+  </div>
+  <div class="field">
+    <%= f.label :providerfirstname %><br>
+    <%= f.text_area :providerfirstname %>
+  </div>
+  <div class="field">
+    <%= f.label :dob %><br>
+    <%= f.date_select :dob %>
+  </div>
+  <div class="field">
+    <%= f.label :deanum %><br>
+    <%= f.text_area :deanum %>
+  </div>
+  <div class="field">
+    <%= f.label :deaexpires %><br>
+    <%= f.date_select :deaexpires %>
+  </div>
+  <div class="field">
+    <%= f.label :nmlicensenum %><br>
+    <%= f.text_area :nmlicensenum %>
+  </div>
+  <div class="field">
+    <%= f.label :nmlicenseexpires %><br>
+    <%= f.date_select :nmlicenseexpires %>
+  </div>
+  <div class="field">
+    <%= f.label :providerphone %><br>
+    <%= f.text_area :providerphone %>
+  </div>
+  <div class="field">
+    <%= f.label :providersecondaryphone %><br>
+    <%= f.text_area :providersecondaryphone %>
+  </div>
+  <div class="field">
+    <%= f.label :providerfax %><br>
+    <%= f.text_area :providerfax %>
+  </div>
+  <div class="field">
+    <%= f.label :providercell %><br>
+    <%= f.text_area :providercell %>
+  </div>
+  <div class="field">
+    <%= f.label :providernpi %><br>
+    <%= f.text_area :providernpi %>
+  </div>
+  <div class="field">
+    <%= f.label :officecontact %><br>
+    <%= f.text_area :officecontact %>
+  </div>
+  <div class="field">
+    <%= f.label :crdntcontact %><br>
+    <%= f.text_area :crdntcontact %>
+  </div>
+  <div class="field">
+    <%= f.label :hospitalaffiliation %><br>
+    <%= f.text_area :hospitalaffiliation %>
+  </div>
+  <div class="field">
+    <%= f.label :hospitalaffiliation %><br>
+    <%= f.text_area :hospitalaffiliation %>
+  </div>
+  <div class="field">
+    <%= f.label :providernotes %><br>
+    <%= f.text_area :providernotes %>
+  </div>
+  <div class="field">
+    <%= f.label :dues %><br>
+    <%= f.text_field :dues %>
+  </div>
+  <div class="field">
+    <%= f.label :adjustment %><br>
+    <%= f.text_field :adjustment %>
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :changedate %><br>
+    <%= f.date_select :changedate %>
+  </div>
+  <div class="field">
+    <%= f.label :change %><br>
+    <%= f.text_area :change %>
+  </div>
+  <div class="field">
+    <%= f.label :provisionaldate %><br>
+    <%= f.date_select :provisionaldate %>
+  </div>
+  <div class="field">
+    <%= f.label :caqhnum %><br>
+    <%= f.number_field :caqhnum %>
+  </div>
+  <div class="field">
+    <%= f.label :provision %><br>
+    <%= f.text_area :provision %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

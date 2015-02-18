@@ -1,0 +1,105 @@
+<%= form_for(@insurance) do |f| %>
+  <% if @insurance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@insurance.errors.count, "error") %> prohibited this insurance from being saved:</h2>
+
+      <ul>
+      <% @insurance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :insurance %><br>
+    <%= f.text_area :insurance %>
+  </div>
+  <div class="field">
+    <%= f.label :insuranceaddress %><br>
+    <%= f.text_area :insuranceaddress %>
+  </div>
+  <div class="field">
+    <%= f.label :insurancecity %><br>
+    <%= f.text_area :insurancecity %>
+  </div>
+  <div class="field">
+    <%= f.label :insurancestate %><br>
+    <%= f.text_area :insurancestate %>
+  </div>
+  <div class="field">
+    <%= f.label :insurancezip %><br>
+    <%= f.text_area :insurancezip %>
+  </div>
+  <div class="field">
+    <%= f.label :insurancephone %><br>
+    <%= f.text_area :insurancephone %>
+  </div>
+  <div class="field">
+    <%= f.label :prrname %><br>
+    <%= f.text_area :prrname %>
+  </div>
+  <div class="field">
+    <%= f.label :prrphone %><br>
+    <%= f.text_area :prrphone %>
+  </div>
+  <div class="field">
+    <%= f.label :prrext %><br>
+    <%= f.text_area :prrext %>
+  </div>
+  <div class="field">
+    <%= f.label :prrfax %><br>
+    <%= f.text_area :prrfax %>
+  </div>
+  <div class="field">
+    <%= f.label :prremail %><br>
+    <%= f.text_area :prremail %>
+  </div>
+  <div class="field">
+    <%= f.label :ncrname %><br>
+    <%= f.text_area :ncrname %>
+  </div>
+  <div class="field">
+    <%= f.label :ncrphone %><br>
+    <%= f.text_area :ncrphone %>
+  </div>
+  <div class="field">
+    <%= f.label :nvrext %><br>
+    <%= f.text_area :nvrext %>
+  </div>
+  <div class="field">
+    <%= f.label :ncvrfax %><br>
+    <%= f.text_area :ncvrfax %>
+  </div>
+  <div class="field">
+    <%= f.label :ncremail %><br>
+    <%= f.text_area :ncremail %>
+  </div>
+  <div class="field">
+    <%= f.label :crname %><br>
+    <%= f.text_area :crname %>
+  </div>
+  <div class="field">
+    <%= f.label :crphone %><br>
+    <%= f.text_area :crphone %>
+  </div>
+  <div class="field">
+    <%= f.label :crext %><br>
+    <%= f.text_field :crext %>
+  </div>
+  <div class="field">
+    <%= f.label :crfax %><br>
+    <%= f.text_area :crfax %>
+  </div>
+  <div class="field">
+    <%= f.label :cremail %><br>
+    <%= f.text_area :cremail %>
+  </div>
+  <div class="field">
+    <%= f.label :insurancenotes %><br>
+    <%= f.text_area :insurancenotes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

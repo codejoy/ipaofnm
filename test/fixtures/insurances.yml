@@ -1,0 +1,49 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  insurance: MyText
+  insuranceaddress: MyText
+  insurancecity: MyText
+  insurancestate: MyText
+  insurancezip: MyText
+  insurancephone: MyText
+  prrname: MyText
+  prrphone: MyText
+  prrext: MyText
+  prrfax: MyText
+  prremail: MyText
+  ncrname: MyText
+  ncrphone: MyText
+  nvrext: MyText
+  ncvrfax: MyText
+  ncremail: MyText
+  crname: MyText
+  crphone: MyText
+  crext: 
+  crfax: MyText
+  cremail: MyText
+  insurancenotes: MyText
+
+two:
+  insurance: MyText
+  insuranceaddress: MyText
+  insurancecity: MyText
+  insurancestate: MyText
+  insurancezip: MyText
+  insurancephone: MyText
+  prrname: MyText
+  prrphone: MyText
+  prrext: MyText
+  prrfax: MyText
+  prremail: MyText
+  ncrname: MyText
+  ncrphone: MyText
+  nvrext: MyText
+  ncvrfax: MyText
+  ncremail: MyText
+  crname: MyText
+  crphone: MyText
+  crext: 
+  crfax: MyText
+  cremail: MyText
+  insurancenotes: MyText

@@ -1,0 +1,1 @@
+json.extract! @group, :id, :groupname, :groupaddress, :groupcity, :groupstate, :groupzip, :groupphone, :groupfax, :groupnpi, :groupcontact, :grouptin, :startdate, :enddate, :changedate, :change, :notes, :billingid, :mailingaddress, :mailingcity, :mailingstate, :termedcomment, :istermed, :mailingzip, :created_at, :updated_at

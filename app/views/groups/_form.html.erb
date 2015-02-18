@@ -1,0 +1,105 @@
+<%= form_for(@group) do |f| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+      <ul>
+      <% @group.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :groupname %><br>
+    <%= f.text_area :groupname %>
+  </div>
+  <div class="field">
+    <%= f.label :groupaddress %><br>
+    <%= f.text_area :groupaddress %>
+  </div>
+  <div class="field">
+    <%= f.label :groupcity %><br>
+    <%= f.text_area :groupcity %>
+  </div>
+  <div class="field">
+    <%= f.label :groupstate %><br>
+    <%= f.text_area :groupstate %>
+  </div>
+  <div class="field">
+    <%= f.label :groupzip %><br>
+    <%= f.text_area :groupzip %>
+  </div>
+  <div class="field">
+    <%= f.label :groupphone %><br>
+    <%= f.text_area :groupphone %>
+  </div>
+  <div class="field">
+    <%= f.label :groupfax %><br>
+    <%= f.text_area :groupfax %>
+  </div>
+  <div class="field">
+    <%= f.label :groupnpi %><br>
+    <%= f.text_area :groupnpi %>
+  </div>
+  <div class="field">
+    <%= f.label :groupcontact %><br>
+    <%= f.text_area :groupcontact %>
+  </div>
+  <div class="field">
+    <%= f.label :grouptin %><br>
+    <%= f.text_area :grouptin %>
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.date_select :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %><br>
+    <%= f.date_select :enddate %>
+  </div>
+  <div class="field">
+    <%= f.label :changedate %><br>
+    <%= f.date_select :changedate %>
+  </div>
+  <div class="field">
+    <%= f.label :change %><br>
+    <%= f.text_area :change %>
+  </div>
+  <div class="field">
+    <%= f.label :notes %><br>
+    <%= f.text_area :notes %>
+  </div>
+  <div class="field">
+    <%= f.label :billingid %><br>
+    <%= f.number_field :billingid %>
+  </div>
+  <div class="field">
+    <%= f.label :mailingaddress %><br>
+    <%= f.text_area :mailingaddress %>
+  </div>
+  <div class="field">
+    <%= f.label :mailingcity %><br>
+    <%= f.text_area :mailingcity %>
+  </div>
+  <div class="field">
+    <%= f.label :mailingstate %><br>
+    <%= f.text_area :mailingstate %>
+  </div>
+  <div class="field">
+    <%= f.label :termedcomment %><br>
+    <%= f.text_area :termedcomment %>
+  </div>
+  <div class="field">
+    <%= f.label :istermed %><br>
+    <%= f.check_box :istermed %>
+  </div>
+  <div class="field">
+    <%= f.label :mailingzip %><br>
+    <%= f.text_area :mailingzip %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

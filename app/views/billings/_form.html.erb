@@ -1,0 +1,53 @@
+<%= form_for(@billing) do |f| %>
+  <% if @billing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@billing.errors.count, "error") %> prohibited this billing from being saved:</h2>
+
+      <ul>
+      <% @billing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :billingcompany %><br>
+    <%= f.text_area :billingcompany %>
+  </div>
+  <div class="field">
+    <%= f.label :billingaddress %><br>
+    <%= f.text_area :billingaddress %>
+  </div>
+  <div class="field">
+    <%= f.label :billingcity %><br>
+    <%= f.text_area :billingcity %>
+  </div>
+  <div class="field">
+    <%= f.label :billingstate %><br>
+    <%= f.text_field :billingstate %>
+  </div>
+  <div class="field">
+    <%= f.label :billingzip %><br>
+    <%= f.text_area :billingzip %>
+  </div>
+  <div class="field">
+    <%= f.label :billingphone %><br>
+    <%= f.text_area :billingphone %>
+  </div>
+  <div class="field">
+    <%= f.label :billingfax %><br>
+    <%= f.text_area :billingfax %>
+  </div>
+  <div class="field">
+    <%= f.label :billingemail %><br>
+    <%= f.text_area :billingemail %>
+  </div>
+  <div class="field">
+    <%= f.label :billingcontact %><br>
+    <%= f.text_area :billingcontact %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

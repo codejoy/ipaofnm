@@ -1,0 +1,57 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  providertin: MyText
+  providerlastname: MyText
+  providerfirstname: MyText
+  dob: 2015-02-08
+  deanum: MyText
+  deaexpires: 2015-02-08
+  nmlicensenum: MyText
+  nmlicenseexpires: 2015-02-08
+  providerphone: MyText
+  providersecondaryphone: MyText
+  providerfax: MyText
+  providercell: MyText
+  providernpi: MyText
+  officecontact: MyText
+  crdntcontact: MyText
+  hospitalaffiliation: MyText
+  hospitalaffiliation: MyText
+  providernotes: MyText
+  dues: 9.99
+  adjustment: 9.99
+  startdate: 2015-02-08
+  changedate: 2015-02-08
+  change: MyText
+  provisionaldate: 2015-02-08
+  caqhnum: 1
+  provision: MyText
+
+two:
+  providertin: MyText
+  providerlastname: MyText
+  providerfirstname: MyText
+  dob: 2015-02-08
+  deanum: MyText
+  deaexpires: 2015-02-08
+  nmlicensenum: MyText
+  nmlicenseexpires: 2015-02-08
+  providerphone: MyText
+  providersecondaryphone: MyText
+  providerfax: MyText
+  providercell: MyText
+  providernpi: MyText
+  officecontact: MyText
+  crdntcontact: MyText
+  hospitalaffiliation: MyText
+  hospitalaffiliation: MyText
+  providernotes: MyText
+  dues: 9.99
+  adjustment: 9.99
+  startdate: 2015-02-08
+  changedate: 2015-02-08
+  change: MyText
+  provisionaldate: 2015-02-08
+  caqhnum: 1
+  provision: MyText

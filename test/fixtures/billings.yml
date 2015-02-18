@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  billingcompany: MyText
+  billingaddress: MyText
+  billingcity: MyText
+  billingstate: 
+  billingzip: MyText
+  billingphone: MyText
+  billingfax: MyText
+  billingemail: MyText
+  billingcontact: MyText
+
+two:
+  billingcompany: MyText
+  billingaddress: MyText
+  billingcity: MyText
+  billingstate: 
+  billingzip: MyText
+  billingphone: MyText
+  billingfax: MyText
+  billingemail: MyText
+  billingcontact: MyText

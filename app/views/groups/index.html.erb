@@ -1,0 +1,65 @@
+<h1>Listing groups</h1>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>NPI</th>
+      <th>Contact</th>
+      <th>Tin</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Change Date</th>
+      <th>Change</th>
+      <th>Notes</th>      
+      <th>Mailing Address</th>
+      <th>Mailing City</th>
+      <th>Mailing State</th>
+      <th>Termed Comment</th>
+      <th>Is Termed?</th>
+      <th>Zip</th>      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @groups.each do |group| %>
+      <tr>
+        <td><%= group.groupname %></td>
+        <td><%= group.groupaddress %></td>
+        <td><%= group.groupcity %></td>
+        <td><%= group.groupstate %></td>
+        <td><%= group.groupzip %></td>
+        <td><%= group.groupphone %></td>
+        <td><%= group.groupfax %></td>
+        <td><%= group.groupnpi %></td>
+        <td><%= group.groupcontact %></td>
+        <td><%= group.grouptin %></td>
+        <td><%= group.startdate %></td>
+        <td><%= group.enddate %></td>
+        <td><%= group.changedate %></td>
+        <td><%= group.change %></td>
+        <td><%= group.notes %></td>
+        <td><%= group.billingid %></td>
+        <td><%= group.mailingaddress %></td>
+        <td><%= group.mailingcity %></td>
+        <td><%= group.mailingstate %></td>
+        <td><%= group.termedcomment %></td>
+        <td><%= group.istermed %></td>
+        <td><%= group.mailingzip %></td>
+        <td><%= link_to 'Show', group %></td>
+        <td><%= link_to 'Edit', edit_group_path(group) %></td>
+        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group', new_group_path %>

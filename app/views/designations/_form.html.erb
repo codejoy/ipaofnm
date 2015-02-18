@@ -1,0 +1,33 @@
+<%= form_for(@designation) do |f| %>
+  <% if @designation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@designation.errors.count, "error") %> prohibited this designation from being saved:</h2>
+
+      <ul>
+      <% @designation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :designation %><br>
+    <%= f.text_area :designation %>
+  </div>
+  <div class="field">
+    <%= f.label :dues %><br>
+    <%= f.text_field :dues %>
+  </div>
+  <div class="field">
+    <%= f.label :amtchangedate %><br>
+    <%= f.date_select :amtchangedate %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_area :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
