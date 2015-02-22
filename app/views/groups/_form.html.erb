@@ -9,18 +9,22 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
-
+  <% end %> 
+  <table border="1">
+    <tr> 
+        <td>
+         <%= f.label "Group Name" %>
+          <%= f.text_area :groupname %>
+          </td>
+          <td>
+          <%= f.label "Group Address" %>
+          <%= f.text_area :groupaddress %>
+        </td>
+    
+    </tr>
+  </table>
   <div class="field">
-    <%= f.label :groupname %><br>
-    <%= f.text_area :groupname %>
-  </div>
-  <div class="field">
-    <%= f.label :groupaddress %><br>
-    <%= f.text_area :groupaddress %>
-  </div>
-  <div class="field">
-    <%= f.label :groupcity %><br>
+    <%= f.label "Group City"%><br>
     <%= f.text_area :groupcity %>
   </div>
   <div class="field">
