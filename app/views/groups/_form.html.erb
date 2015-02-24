@@ -10,99 +10,108 @@
       </ul>
     </div>
   <% end %> 
-  <table border="1">
+  <table border="0">
     <tr> 
         <td>
          <%= f.label "Group Name" %>
-          <%= f.text_area :groupname %>
+          <%= f.text_field :groupname %>
           </td>
           <td>
           <%= f.label "Group Address" %>
-          <%= f.text_area :groupaddress %>
+          <%= f.text_field :groupaddress %>
         </td>
-    
+    </tr>
+    <tr>
+     <td>
+        <%= f.label "Group City"%>
+        <%= f.text_field :groupcity %>
+      </td>
+        <td>
+          <%= f.label "Group State" %>
+          <%= f.text_field :groupstate %>
+      </td>
+    </tr>
+    <tr>
+     <td>
+        <%= f.label "Group Zip Code" %>
+        <%= f.text_field :groupzip %>
+      </td>
+        <td>
+          <%= f.label "Group Phone" %>
+          <%= f.text_field :groupphone %>
+      </td>
+    </tr>
+    <tr>
+     <td>
+        <%= f.label "Group Fax Number" %>
+        <%= f.text_field :groupfax %>
+      </td>
+        <td>
+          <%= f.label "Group NPI" %>
+          <%= f.text_field :groupnpi %>
+      </td>
+    </tr>
+    <tr>
+     <td>
+        <%= f.label "Group Contact" %>
+        <%= f.text_field :groupcontact %>
+      </td>
+        <td>
+          <%= f.label "Group TIN" %>
+          <%= f.text_field :grouptin %>
+      </td>
+    </tr>
+   <tr>
+     <td>
+        <%= f.label "Start Date" %>
+        <%= f.text_field :startdate %>
+      </td>
+        <td>
+          <%= f.label "End Date" %>
+          <%= f.text_field :enddate %>
+      </td>
+       <td>
+          <%= f.label "Change Date" %>
+          <%= f.text_field :changedate %>
+      </td>
+    </tr>
+    <tr>
+        <td>
+          <%= f.label "Notes"  %>
+          <%= f.text_field :notes %>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <%= f.label "Mailing Address"  %>
+          <%= f.text_field :mailingaddress %>
+        </td>
+        <td>
+          <%= f.label "Mailing City"  %>
+          <%= f.text_field :mailingcity %>
+        </td>
+        <td>
+          <%= f.label "Mailing State"  %>
+          <%= f.text_field :mailingstate %>
+        </td>
+        <td>
+          <%= f.label "Mailing Zip"  %>
+          <%= f.text_field :mailingzip %>
+        </td>
+    </tr>
+    <tr>
+          <td>
+            <%= f.label "Is Termed?" %>
+            <%= f.check_box :istermed %>
+         </td>
+        <td>
+          <%= f.label "Termed Comment"  %>
+          <%= f.text_field :termedcomment %>
+        </td>
+ 
     </tr>
   </table>
-  <div class="field">
-    <%= f.label "Group City"%><br>
-    <%= f.text_area :groupcity %>
-  </div>
-  <div class="field">
-    <%= f.label :groupstate %><br>
-    <%= f.text_area :groupstate %>
-  </div>
-  <div class="field">
-    <%= f.label :groupzip %><br>
-    <%= f.text_area :groupzip %>
-  </div>
-  <div class="field">
-    <%= f.label :groupphone %><br>
-    <%= f.text_area :groupphone %>
-  </div>
-  <div class="field">
-    <%= f.label :groupfax %><br>
-    <%= f.text_area :groupfax %>
-  </div>
-  <div class="field">
-    <%= f.label :groupnpi %><br>
-    <%= f.text_area :groupnpi %>
-  </div>
-  <div class="field">
-    <%= f.label :groupcontact %><br>
-    <%= f.text_area :groupcontact %>
-  </div>
-  <div class="field">
-    <%= f.label :grouptin %><br>
-    <%= f.text_area :grouptin %>
-  </div>
-  <div class="field">
-    <%= f.label :startdate %><br>
-    <%= f.date_select :startdate %>
-  </div>
-  <div class="field">
-    <%= f.label :enddate %><br>
-    <%= f.date_select :enddate %>
-  </div>
-  <div class="field">
-    <%= f.label :changedate %><br>
-    <%= f.date_select :changedate %>
-  </div>
-  <div class="field">
-    <%= f.label :change %><br>
-    <%= f.text_area :change %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br>
-    <%= f.text_area :notes %>
-  </div>
-  <div class="field">
-    <%= f.label :billingid %><br>
-    <%= f.number_field :billingid %>
-  </div>
-  <div class="field">
-    <%= f.label :mailingaddress %><br>
-    <%= f.text_area :mailingaddress %>
-  </div>
-  <div class="field">
-    <%= f.label :mailingcity %><br>
-    <%= f.text_area :mailingcity %>
-  </div>
-  <div class="field">
-    <%= f.label :mailingstate %><br>
-    <%= f.text_area :mailingstate %>
-  </div>
-  <div class="field">
-    <%= f.label :termedcomment %><br>
-    <%= f.text_area :termedcomment %>
-  </div>
-  <div class="field">
-    <%= f.label :istermed %><br>
-    <%= f.check_box :istermed %>
-  </div>
-  <div class="field">
-    <%= f.label :mailingzip %><br>
-    <%= f.text_area :mailingzip %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
