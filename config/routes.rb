@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'home/index'
+
   resources :specialties
 
   resources :insurances
@@ -11,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :groups
 
+  root "home#index"  #not sure what the above get is doing ?? or why the rest is in resources?
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

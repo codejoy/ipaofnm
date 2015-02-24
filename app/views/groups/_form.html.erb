@@ -1,4 +1,4 @@
-<%= form_for(@group) do |f| %>
+<%= bootstrap_form_for(@group) do |f| %>
   <% if @group.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
@@ -12,23 +12,23 @@
   <% end %> 
   <table border="0">
     <tr> 
-        <td>
-         <%= f.label "Group Name" %>
-          <%= f.text_field :groupname %>
+        <td> <!-- column space somehow try the boot strap grids -->
+      
+          <%= f.text_field :groupname, label: "Group Name" %>
           </td>
           <td>
-          <%= f.label "Group Address" %>
-          <%= f.text_field :groupaddress %>
+ 
+          <%= f.text_field :groupaddress, label: "Group Address" %>
         </td>
     </tr>
     <tr>
      <td>
-        <%= f.label "Group City"%>
-        <%= f.text_field :groupcity %>
+
+        <%= f.text_field :groupcity, label: "Group City"%>
       </td>
         <td>
-          <%= f.label "Group State" %>
-          <%= f.text_field :groupstate %>
+      
+          <%= f.text_field :groupstate, label: "Group State" %>
       </td>
     </tr>
     <tr>
@@ -64,15 +64,15 @@
    <tr>
      <td>
         <%= f.label "Start Date" %>
-        <%= f.text_field :startdate %>
+        <%= f.date_select :startdate %>
       </td>
         <td>
           <%= f.label "End Date" %>
-          <%= f.text_field :enddate %>
+          <%= f.date_select :enddate %>
       </td>
        <td>
           <%= f.label "Change Date" %>
-          <%= f.text_field :changedate %>
+          <%= f.date_select :changedate %>
       </td>
     </tr>
     <tr>
