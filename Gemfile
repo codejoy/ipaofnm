@@ -13,6 +13,8 @@ group :assets  do
 
 	gem 'uglifier', '>= 1.3.0'
 end
+
+gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
@@ -27,6 +29,7 @@ gem 'sqlite3'
 # gem 'therubyracer',  platforms: :ruby
 gem 'execjs'
 # Use jquery as the JavaScript library
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

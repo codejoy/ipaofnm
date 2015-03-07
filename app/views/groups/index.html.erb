@@ -1,40 +1,41 @@
- <h1>Listing groups</h1>
-
-<table border="1">
+<%- model_class = Group -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped"  id="groups">
+<!-- table class="display"  id="groups" -->
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-    </tr>
-    <tr>
-      <th>Phone</th>
-      <th>Fax</th>
-      <th>NPI</th>
-      <th>Contact</th>
-      <th>Tin</th>
-    </tr>        
-    <tr>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Change Date</th>
-      <th>Change</th>
-      <th>Notes</th>
-    <tr>      
-      <th>Mailing Address</th>
-      <th>Mailing City</th>
-      <th>Mailing State</th>
-      <th>Termed Comment</th>
-      <th>Is Termed?</th>
-      <th>Zip</th>      
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:groupname) %></th>
+      <th><%= model_class.human_attribute_name(:groupaddress) %></th>
+      <th><%= model_class.human_attribute_name(:groupcity) %></th>
+      <th><%= model_class.human_attribute_name(:groupstate) %></th>
+      <th><%= model_class.human_attribute_name(:groupzip) %></th>
+      <th><%= model_class.human_attribute_name(:grouphone) %></th>
+      <th><%= model_class.human_attribute_name(:groupfax) %></th>
+      <th><%= model_class.human_attribute_name(:groupnpi) %></th>
+      <th><%= model_class.human_attribute_name(:groupcontact) %></th>
+      <th><%= model_class.human_attribute_name(:grouptin) %></th>
+      <th><%= model_class.human_attribute_name(:startdate) %></th>
+      <th><%= model_class.human_attribute_name(:enddate) %></th>
+      <th><%= model_class.human_attribute_name(:changedate) %></th>
+      <th><%= model_class.human_attribute_name(:change) %></th>
+      <th><%= model_class.human_attribute_name(:notes) %></th>
+      <th><%= model_class.human_attribute_name(:mailingaddress) %></th>
+      <th><%= model_class.human_attribute_name(:mailingcity) %></th>
+      <th><%= model_class.human_attribute_name(:mailingstate) %></th>
+      <th><%= model_class.human_attribute_name(:termedcommet) %></th>
+      <th><%= model_class.human_attribute_name(:istermed) %></th>
+      <th><%= model_class.human_attribute_name(:mailingzip) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>    
     </tr>
   </thead>
 
   <tbody>
     <% @groups.each do |group| %>
       <tr>
+        <td><%= link_to group.id, group_path(group) %></td>
         <td><%= group.groupname %></td>
         <td><%= group.groupaddress %></td>
         <td><%= group.groupcity %></td>
@@ -50,16 +51,21 @@
         <td><%= group.changedate %></td>
         <td><%= group.change %></td>
         <td><%= group.notes %></td>
-        <td><%= group.billingid %></td>
         <td><%= group.mailingaddress %></td>
         <td><%= group.mailingcity %></td>
         <td><%= group.mailingstate %></td>
         <td><%= group.termedcomment %></td>
         <td><%= group.istermed %></td>
         <td><%= group.mailingzip %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_group_path(group), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      group_path(group),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
       </tr>
     <% end %>
   </tbody>
