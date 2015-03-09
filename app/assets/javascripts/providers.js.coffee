@@ -1,4 +1,4 @@
-$(document).on "page:change", -> 
-	$('#providers').dataTable()
+jQuery -> 
+	$('#providers').dataTable
 	sPaginationType: "full_numbers"
 	bJQueryUI: true

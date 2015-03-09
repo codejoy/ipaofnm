@@ -1,4 +1,4 @@
-$(document).on "page:change", -> 
-	$('#groups').dataTable()
+jQuery -> 
+	$('#groups').dataTable
 	sPaginationType: "full_numbers"
-	bJQueryUI: true
+

@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Ipaofnm</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device=width, initial-scale=1.0">
 </head>
@@ -47,16 +47,8 @@
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-<div class="container">
-  <div class="row"> 
-    <div class="col-xs-12 col-md-8"> <%= yield %> </div>
-    <div class="col-xs-6 col-md-4">
-
-  
-      <!-- should be a column on right it isnt working -->
-      <h3> Welcome to the IPA of NM</h3>
-
-    </div>
+  <div class="container">
+    <%= yield %>
   </div>
 </div>
 </body>
