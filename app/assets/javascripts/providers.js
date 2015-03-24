@@ -1,5 +1,5 @@
 $(document).ready( function () {
-	$("#groups").DataTable({paging:true, 
+	$("#providers").DataTable({paging:true, 
 							pagingType: 'full_numbers'
 	});
 });
