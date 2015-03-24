@@ -2,83 +2,33 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<table class="datatable" id="providers">
+<table class="display"  id="providers">
   <thead>
     <tr>
+
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:providertin) %></th>
       <th><%= model_class.human_attribute_name(:providerlastname) %></th>
       <th><%= model_class.human_attribute_name(:providerfirstname) %></th>
       <th><%= model_class.human_attribute_name(:dob) %></th>
-      <th><%= model_class.human_attribute_name(:deanum) %></th>
-      <th><%= model_class.human_attribute_name(:deaexpires) %></th>
-      <th><%= model_class.human_attribute_name(:nmlicensenum) %></th>
-      <th><%= model_class.human_attribute_name(:nmlicenseexpires) %></th>
-      <th><%= model_class.human_attribute_name(:providerphone) %></th>
-      <th><%= model_class.human_attribute_name(:providersecondaryphone) %></th>
-      <th><%= model_class.human_attribute_name(:providerfax) %></th>
-      <th><%= model_class.human_attribute_name(:providercell) %></th>
-      <th><%= model_class.human_attribute_name(:providernpi) %></th>
-      <th><%= model_class.human_attribute_name(:officecontact) %></th>
-      <th><%= model_class.human_attribute_name(:crdntcontact) %></th>
-      <th><%= model_class.human_attribute_name(:hospitalaffiliation) %></th>
-      <th><%= model_class.human_attribute_name(:providernotes) %></th>
-      <th><%= model_class.human_attribute_name(:dues) %></th>
-      <th><%= model_class.human_attribute_name(:adjustment) %></th>
-      <th><%= model_class.human_attribute_name(:startdate) %></th>
-      <th><%= model_class.human_attribute_name(:changedate) %></th>
-      <th><%= model_class.human_attribute_name(:change) %></th>
-      <th><%= model_class.human_attribute_name(:provisionaldate) %></th>
-      <th><%= model_class.human_attribute_name(:caqhnum) %></th>
-      <th><%= model_class.human_attribute_name(:provision) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+
     </tr>
   </thead>
+
   <tbody>
     <% @providers.each do |provider| %>
       <tr>
         <td><%= link_to provider.id, provider_path(provider) %></td>
-        <td><%= provider.providertin %></td>
         <td><%= provider.providerlastname %></td>
         <td><%= provider.providerfirstname %></td>
-        <td><%= provider.dob %></td>
-        <td><%= provider.deanum %></td>
-        <td><%= provider.deaexpires %></td>
-        <td><%= provider.nmlicensenum %></td>
-        <td><%= provider.nmlicenseexpires %></td>
-        <td><%= provider.providerphone %></td>
-        <td><%= provider.providersecondaryphone %></td>
-        <td><%= provider.providerfax %></td>
-        <td><%= provider.providercell %></td>
-        <td><%= provider.providernpi %></td>
-        <td><%= provider.officecontact %></td>
-        <td><%= provider.crdntcontact %></td>
-        <td><%= provider.hospitalaffiliation %></td>
-        <td><%= provider.providernotes %></td>
-        <td><%= provider.dues %></td>
-        <td><%= provider.adjustment %></td>
-        <td><%= provider.startdate %></td>
-        <td><%= provider.changedate %></td>
-        <td><%= provider.change %></td>
-        <td><%= provider.provisionaldate %></td>
-        <td><%= provider.caqhnum %></td>
-        <td><%= provider.provision %></td>
-        <td><%=l provider.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_provider_path(provider), :class => 'btn btn-default btn-xs' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      provider_path(provider),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-xs btn-danger' %>
-        </td>
+         <td><%= provider.dob %></td>
+        <td><%= link_to 'Show', provider %></td>
+        <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
+        <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_provider_path,
-            :class => 'btn btn-primary' %>
+<br>
+
+<%= link_to 'New Provider', new_provider_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150224173201) do
+ActiveRecord::Schema.define(version: 20150324220723) do
 
   create_table "billings", force: true do |t|
     t.text     "billingcompany"

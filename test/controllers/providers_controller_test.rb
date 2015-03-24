@@ -18,7 +18,7 @@ class ProvidersControllerTest < ActionController::TestCase
 
   test "should create provider" do
     assert_difference('Provider.count') do
-      post :create, provider: { adjustment: @provider.adjustment, caqhnum: @provider.caqhnum, change: @provider.change, changedate: @provider.changedate, crdntcontact: @provider.crdntcontact, deaexpires: @provider.deaexpires, deanum: @provider.deanum, dob: @provider.dob, dues: @provider.dues, hospitalaffiliation: @provider.hospitalaffiliation, hospitalaffiliation: @provider.hospitalaffiliation, nmlicenseexpires: @provider.nmlicenseexpires, nmlicensenum: @provider.nmlicensenum, officecontact: @provider.officecontact, providercell: @provider.providercell, providerfax: @provider.providerfax, providerfirstname: @provider.providerfirstname, providerlastname: @provider.providerlastname, providernotes: @provider.providernotes, providernpi: @provider.providernpi, providerphone: @provider.providerphone, providersecondaryphone: @provider.providersecondaryphone, providertin: @provider.providertin, provision: @provider.provision, provisionaldate: @provider.provisionaldate, startdate: @provider.startdate }
+      post :create, provider: {  }
     end
 
     assert_redirected_to provider_path(assigns(:provider))
@@ -35,7 +35,7 @@ class ProvidersControllerTest < ActionController::TestCase
   end
 
   test "should update provider" do
-    patch :update, id: @provider, provider: { adjustment: @provider.adjustment, caqhnum: @provider.caqhnum, change: @provider.change, changedate: @provider.changedate, crdntcontact: @provider.crdntcontact, deaexpires: @provider.deaexpires, deanum: @provider.deanum, dob: @provider.dob, dues: @provider.dues, hospitalaffiliation: @provider.hospitalaffiliation, hospitalaffiliation: @provider.hospitalaffiliation, nmlicenseexpires: @provider.nmlicenseexpires, nmlicensenum: @provider.nmlicensenum, officecontact: @provider.officecontact, providercell: @provider.providercell, providerfax: @provider.providerfax, providerfirstname: @provider.providerfirstname, providerlastname: @provider.providerlastname, providernotes: @provider.providernotes, providernpi: @provider.providernpi, providerphone: @provider.providerphone, providersecondaryphone: @provider.providersecondaryphone, providertin: @provider.providertin, provision: @provider.provision, provisionaldate: @provider.provisionaldate, startdate: @provider.startdate }
+    patch :update, id: @provider, provider: {  }
     assert_redirected_to provider_path(assigns(:provider))
   end
 

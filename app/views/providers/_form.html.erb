@@ -1,199 +1,63 @@
-<%= form_for @provider, :html => { :class => "form-horizontal provider" } do |f| %>
+<%= form_for (@provider) do |f| %>
+  <% if @provider.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h2>
 
-    <% if @provider.errors.any? %>
-    <div id="error_expl" class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= pluralize(@provider.errors.count, "error") %> prohibited this provider from being saved:</h3>
-      </div>
-      <div class="panel-body">
-        <ul>
-        <% @provider.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+      <ul>
+      <% @provider.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
-  <% end %>
-
-  <div class="control-group">
-    <%= f.label :providertin, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providertin, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providertin]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providerlastname, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providerlastname, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providerlastname]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providerfirstname, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providerfirstname, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providerfirstname]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :dob, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :dob, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:dob]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :deanum, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :deanum, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:deanum]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :deaexpires, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :deaexpires, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:deaexpires]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :nmlicensenum, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :nmlicensenum, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:nmlicensenum]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :nmlicenseexpires, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :nmlicenseexpires, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:nmlicenseexpires]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providerphone, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providerphone, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providerphone]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providersecondaryphone, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providersecondaryphone, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providersecondaryphone]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providerfax, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providerfax, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providerfax]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providercell, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providercell, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providercell]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providernpi, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providernpi, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providernpi]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :officecontact, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :officecontact, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:officecontact]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :crdntcontact, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :crdntcontact, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:crdntcontact]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :hospitalaffiliation, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :hospitalaffiliation, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:hospitalaffiliation]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :providernotes, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :providernotes, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:providernotes]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :dues, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :dues, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:dues]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :adjustment, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :adjustment, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:adjustment]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :startdate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :startdate, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:startdate]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :changedate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :changedate, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:changedate]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :change, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :change, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:change]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :provisionaldate, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :provisionaldate, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:provisionaldate]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :caqhnum, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :caqhnum, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:caqhnum]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :provision, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :provision, :class => 'form-control' %>
-    </div>
-    <%= error_span(@provider[:provision]) %>
-  </div>
+  <% end %> 
+  <table border="0">
+    <tr> 
+        <td> <!-- column space somehow try the boot strap grids -->
+          <%= f.label "Provider Last Name" %>
+          <%= f.text_field :providerlastname %>
+          </td>
+          <td>
+          <%= f.label "Provider First Name" %>
+          <%= f.text_field :providerfirstname %>
+        </td>
+    </tr>
+    <tr>
+     <td>
+        <%= f.label "Provider Phone" %>
+        <%= f.text_field :providerphone %>
+      </td>
+        <td>
+           <%= f.label "Provider Secondary Ph:" %>
+          <%= f.text_field :providersecondaryphone %>
+      </td>
+      </tr>
+    <tr>
+         <td>
+           <%= f.label "Provider Fax:" %>
+          <%= f.text_field :providerfax %>
+      </td>
+        <td>
+           <%= f.label "Provider Cell:" %>
+          <%= f.text_field :providercell %>
+      </td>
+    </tr>
 
 
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            providers_path, :class => 'btn btn-default' %>
 
+    <tr>
+     <td>
+        <%= f.label "Provider TIN" %>
+        <%= f.text_field :providertin %>
+      </td>
+        <td>
+           <%= f.label "Provider NPI" %>
+          <%= f.text_field :providernpi %>
+      </td>
+    </tr>
+ 
+  </table>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

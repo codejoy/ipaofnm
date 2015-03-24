@@ -14,7 +14,7 @@ group :assets  do
 	gem 'uglifier', '>= 1.3.0'
 end
 
-gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+gem 'jquery-datatables-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record

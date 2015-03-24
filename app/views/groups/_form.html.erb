@@ -13,22 +13,22 @@
   <table border="0">
     <tr> 
         <td> <!-- column space somehow try the boot strap grids -->
-      
-          <%= f.text_field :groupname, label: "Group Name" %>
+          <%= f.label "Group Name" %>
+          <%= f.text_field :groupname %>
           </td>
           <td>
- 
-          <%= f.text_field :groupaddress, label: "Group Address" %>
+          <%= f.label "Group Address" %>
+          <%= f.text_field :groupaddress %>
         </td>
     </tr>
     <tr>
      <td>
-
-        <%= f.text_field :groupcity, label: "Group City"%>
+        <%= f.label "Group City" %>
+        <%= f.text_field :groupcity %>
       </td>
         <td>
-      
-          <%= f.text_field :groupstate, label: "Group State" %>
+           <%= f.label "Group State" %>
+          <%= f.text_field :groupstate %>
       </td>
     </tr>
     <tr>

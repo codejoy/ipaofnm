@@ -1,1 +1,1 @@
-json.extract! @provider, :id, :providertin, :providerlastname, :providerfirstname, :dob, :deanum, :deaexpires, :nmlicensenum, :nmlicenseexpires, :providerphone, :providersecondaryphone, :providerfax, :providercell, :providernpi, :officecontact, :crdntcontact, :hospitalaffiliation, :hospitalaffiliation, :providernotes, :dues, :adjustment, :startdate, :changedate, :change, :provisionaldate, :caqhnum, :provision, :created_at, :updated_at
+json.extract! @provider, :id, :created_at, :updated_at
